@@ -64,31 +64,43 @@ Effector
 
 v2 testing
 
-* Add tape layers (2x) to gantry to avoid clamping head too hard
-* Make the head geometry slightly smaller (too tight). Maybe remove
-* Design a proper belt/line attachment and tensioning system
-* Design and make mount for laser diode.
-Alt: Make a vinyl/pen actuator
-* Add mounting holes for endstops
+* Marlin on/off using M106 (fan) output. LEDs as zenerdiode for TTL
 * Run tests with laser
-* Design some self-adjusting system for friction parts
 
-Next:
+v2 implement improvements
 
+* Ensure lasermodule does not interfere with wire/belt path
+* Make the pulley have holes for fixing the wire onto, and semi-hollow core for easy threading
+* Make the pulleys smaller
+* Add holes in backwall for motor cables
+* Add mounting holes for endstops
+* Design a belt/line attachment and tensioning system. Or just use strip-ties??
 * Reduce touchpoints/area for the gantry slides.
+* Add holes for attaching RAMPS/controlboard
+* Use a full mid-plate in the gantry for stiffness
+* Maybe move the walls inwards, closer to the slide surface area
+
+Next, full-size laser test
+
+* Make fully parametric, driven by material size + work area
+* Use 2x as the standard workarea aspect ratio
+* Use a standard diode laser module (or something compatible). 33mm sink seems common.
 * Find a solution for managing the cables going to head/effector. 4mm ID bowden tube?
-* Design in space for the RAMPS/controlboard
-* Try to switch pulleys to the fixed-end type used in deltas.
+
+Reproducability
+
+* Test using multiple fiber-guided IR laser diodes with focusing mirror, to cut 4mm+ acrylic.
+* Test making axis in multiple parts, so one can make machines as big as area
 * Test replacing the 608 bearings with printed+tape bearings
 * Test cutting the low-friction tape with diode laser
-* Reduce number of screws used, by having lasercut pins instead
-* Test a build for full-size laser envelope
+* Reduce number of screws used. Use lasercut pins instead?
 
 Maybe:
 
-* Test some lightweight CNC milling, like wax, PCB traces or engraving.
-* Test FDM printing
+* Design some self-adjusting system for friction parts
+* Make a vinylknife/pen attachment
 * Prototype a matching Z-bed/table design
+* Test FDM printing
 
 Research
 
