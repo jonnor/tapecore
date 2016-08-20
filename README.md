@@ -5,9 +5,9 @@ Experiment in super low-cost XY stage, for uses in digital fabrication technique
 which have minimal weight and forces on head (laser engraving, 3d-printing).
 Inspired by the [RishaLaser](http://rishalaser.org) project.
 
-[Youtube VIDEO](https://www.youtube.com/watch?v=5F9-HIbBYwc)
+[Youtube VIDEO](https://www.youtube.com/watch?v=Eynk2ZyVWqM)
 
-![TapeXY first prototype](./doc/tapexy-first.jpg)
+![TapeXY fully functioning prototype](./doc/tapexy-second.jpg)
 
 Key features:
 
