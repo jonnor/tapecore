@@ -59,6 +59,7 @@ Effector
 
 * First working prototype of XY stage, driven by RAMPS/Cura
 * [Laser diode driver](../currentsource). Linear constant-current source based on op-amp+MOSFET, for 5volt supply.
+* Fully operational prototype, driven by RAMPS w/Marlin
 
 ### TODO
 
@@ -141,6 +142,18 @@ Self-reproducability.
 Let I/II-beams consist of multiple sections, with staggered joints?
 Do testing of a long beam (50 cm+). Flatness, stiffness, maximum load.
 Keep compatible with alu profiles? T-slot/Makerbeam/Openbeam
+
+## Penholder
+
+Existing designs
+
+* Servo+fishingline, spring in one direction. http://www.thingiverse.com/thing:749118
+* Servo with 2-bar linkage, lasercut. http://www.thingiverse.com/thing:4185
+* Servo with PTFE bushing, spring in down direction. http://www.thingiverse.com/thing:13407
+* Servo with rotating slot linkage, lasercut+3dprint. http://fab.cba.mit.edu/classes/863.14/people/nathan_melenbrink/Week_15.html
+* Servo with steel bars and POM bushing parts. CNCed https://www.tindie.com/products/ijinstruments/servo-actuated-pen-slide/
+* XY pan+tilt mover, with Z motion. http://www.thingiverse.com/thing:31463
+
 
 ## Beam structures
 
