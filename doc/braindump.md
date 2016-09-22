@@ -26,14 +26,13 @@ The problem however is that the switch cannot be lower than the nozzle when runn
 * Another advantage is that one can use a printed piece with correct offset
 to autolevel also ontop of objects (like a CNC mill)
 
-
 # Reprappable laser
 
 Using Rishalaser/TapeXY as a base.
 Focusing first on ultra-low cost for use with textiles & paper,
 with long-term goal of having high enough power to cut itself and similar structures.
 
-## Milestone 1: Simplified mechanics (in progress)
+## Milestone 1: Simplified mechanics (DONE)
 
 * CoreXY architecture.
 * Using string (Nylon) instead of belts
@@ -42,17 +41,18 @@ with long-term goal of having high enough power to cut itself and similar struct
 
 ## Milestone 2: Raster firmware (in progress)
 
-* First raster-capable open source firmware
-* See [Mtr](../brushless/mtr)
+* Couple open source alternatives available
 
 ## Milestone 3: 
 
-* Discrete custom H-bridge w/microcontroller
+* CNC-millable PCB with discrete H-bridges & microcontroller
 * Firmware runs directly on this microcontroller
 
-## Milestone 4: Fabbable steppermotors
+## Milestone 4: Fabbable motors
 
+* Either brusless with gearing and closed-loop, or a direct-drive stepper
 * 3d-printed or lasercut bobbins and structure
+* Etched
 
 ## Milestone 5: Custom CO2 laser tubes
 
