@@ -63,11 +63,6 @@ Effector
 
 ### TODO
 
-v2 testing
-
-* Marlin on/off using M106 (fan) output. LEDs as zenerdiode for TTL
-* Run tests with laser
-
 v2 implement improvements
 
 * Ensure lasermodule does not interfere with wire/belt path
@@ -86,7 +81,7 @@ Next, full-size laser test
 * Make fully parametric, driven by material size + work area
 * Use 2x as the standard workarea aspect ratio
 * Use a standard diode laser module (or something compatible). 33mm sink seems common.
-* Find a solution for managing the cables going to head/effector. 4mm ID bowden tube?
+* Find a solution for managing the cables going to head/effector. 4mm ID bowden tube? PP or even paper folded into tube
 
 Reproducability
 
@@ -116,14 +111,115 @@ Existing low-cost laser diode engravers
 * [Emblaser](https://darklylabs.com/emblaser-overview) [2](https://sites.google.com/site/3dprinterlist/lasercutters/darklylabs-a3-diode-laser)
 * [Fabool Laser Mini](http://www.smartdiys.cc/fabool-laser-mini/) claims to be openn source. Also has a CO2 laser available.
 
+## I-beam
+
+![First I-beam prototype](./doc/ibeam-first.jpg)
+
+Designed to be a basic construction module, from which relatively large multi-axis machines can be made.
+
+[v1 on Thingiverse](http://www.thingiverse.com/thing:1850612).
+[v1 demo video](https://www.youtube.com/watch?v=oqJivOp4JyQ)
+
+Features
+
+* Rigid I-beam structure, with double-layer core for rotational stiffness
+* Trapped nuts allows attaching from all sides
+* Use as linear guide for slider by wrapping low-friction tape
+
+Source files for FreeCAD
+
+* [Beam](./ibeam2t.fcstd)
+* [Slider](./ibeam2t-slider.fcstd)
+* [Motor connection](./ibeam2t-motor.fcstd)
+
+Vitamins needed:
+
+* Low-friction tape. UHMW PE or Teflon ideal. Kapton also works OK
+* NEMA17 stepper motor, incl M3 screws
+* Braided line (fishing line or similar)
+* 4 pieces M4x20+
+* 4 pieces M4x15+
+
+### TODO
+
+Beam
+
+* Improve trapped nut pattern in sides. Top-left and bottom-right (diagonal) should face one side
+* Remove redundant (blind) holes in top/bottom layer
+* Make tabs wider, reduce number by approx half
+* Split up cut parts into multiple, with top/bottom/sides being a staggered/lapped
+* Maybe reduce height/width a little bit. 30x40 mm?
+
+Tests
+
+* Test making axis in multiple parts, with total length 1.5-2x than machine working area.
+* Test in 3-4 mm plywood. Faster to make and possibly self-replicatable. Is it rigid enough?
+* Design & test a CoreXY using the I-beam as basic building block
+
+Other designs for lasercut beams (untested)
+
+* I-beam. [FreeCAD source](./ibeam-20.fcstd)
+* II-beam. [FreeCAD source](./ibeam-30.fcstd)
+
+Tools for calculating stiffness of beams
+
+* http://www.had2know.com/technology/I-beam-calculator-moments-engineering.html
+* http://www.engineersedge.com/section_properties_menu.shtml
+* http://www.amesweb.info/SectionalPropertiesTabs/SectionalPropertiesIbeam.aspx
+* https://en.m.wikipedia.org/wiki/Deflection_(engineering)
+* https://en.m.wikipedia.org/wiki/List_of_second_moments_of_area
+
+## Pen Z-axis
+
+![Servo driven Z axis for a pen holder](./doc/tapepen-v1.jpg)
+
+3d-printed files [on Thingiverse](http://www.thingiverse.com/thing:1850720).
+[FreeCAD source project](./tapepen.fcstd).
+
+Using a printed V-rail geometry, covered with low-friction tape.
+Has adjustment for the tension, was very practical to dial in the correct amount.
+
+Fits pens 8-15 mm in diameter.
+Lifts straight up, perpendicular to surface. Roughly 10 mm travel.
+Unlike many others servo-driven pen axes which rotate when lifting pen. 
+
+Used in the penplotter which was the award given to the winners of Oslo Innovation Award 2016.
+Successfully printed the diploma live on stage.
+
+Vitamins needed:
+
+* Microservo. SG92R or other with same size head, https://www.adafruit.com/product/169
+* Low-friction tape. UHMW PE or Teflon ideal. Kapton can be used as replacement
+* 2x M3x30 + M3 hex nuts for attaching pen to slider
+* 2x M3x30 for adjusting tension on the slider
+
+TODO/improvements
+
+* Use a slightly bigger/stronger servomotor
+* Use as basis for a lens-moving Z axis for lasers.
+Probably use 3 v-rails instead of 2, keep tensioning principle.
+
+Existing designs by others
+
+* Servo+fishingline, spring in one direction. http://www.thingiverse.com/thing:749118
+* Servo with 2-bar linkage, lasercut. http://www.thingiverse.com/thing:4185
+* Servo with PTFE bushing, spring in down direction. http://www.thingiverse.com/thing:13407
+* Servo with rotating slot linkage, lasercut+3dprint. http://fab.cba.mit.edu/classes/863.14/people/nathan_melenbrink/Week_15.html
+* Servo with steel bars and POM bushing parts. CNCed https://www.tindie.com/products/ijinstruments/servo-actuated-pen-slide/
+* XY pan+tilt mover, with Z motion. http://www.thingiverse.com/thing:31463
+
 ## Reproducability
 
 ### Power needed to reproduce itself.
 
 Mr.Beam II says that with 5W they can cut 4 mm plywood in two passes (no focus adjustment).
-It seems to be a blue LED with no air assist. Adding air-assist might improve cutting efficiency a bit.
+It seems to be a blue diode laser with no air assist. This probably sets 5W as the a lower limit.
 
-This probably sets 5W as the a lower limit. If one could cut 4 mm acrylic instead, or 5-6 mm plywood, that would make it simpler to make a more rigid machine.
+* Adding air-assist might improve cutting efficiency a bit.
+* Adjusting the focus into the material for each pass might help
+* Using PWM to overdrive the laser periodically may also help
+
+If one could cut 4 mm acrylic instead, or 5-6 mm plywood, that would make it simpler to make a more rigid machine.
 This _might_ be doable with 8-10 watts IR diode. If more is needed, may need to assemble 15-20 watt using multiple diodes.
 
 ### Construction tricks
@@ -143,38 +239,6 @@ Self-reproducability.
 Let I/II-beams consist of multiple sections, with staggered joints?
 Do testing of a long beam (50 cm+). Flatness, stiffness, maximum load.
 Keep compatible with alu profiles? T-slot/Makerbeam/Openbeam
-
-## Penholder
-
-Existing designs
-
-* Servo+fishingline, spring in one direction. http://www.thingiverse.com/thing:749118
-* Servo with 2-bar linkage, lasercut. http://www.thingiverse.com/thing:4185
-* Servo with PTFE bushing, spring in down direction. http://www.thingiverse.com/thing:13407
-* Servo with rotating slot linkage, lasercut+3dprint. http://fab.cba.mit.edu/classes/863.14/people/nathan_melenbrink/Week_15.html
-* Servo with steel bars and POM bushing parts. CNCed https://www.tindie.com/products/ijinstruments/servo-actuated-pen-slide/
-* XY pan+tilt mover, with Z motion. http://www.thingiverse.com/thing:31463
-
-
-## Beam structures
-
-Couple of designs for lasercut beams, mostly untested.
-
-* I-beam. [FreeCAD source](./ibeam-20.fcstd)
-* II-beam. [FreeCAD source](./ibeam-30.fcstd)
-
-TODO
-
-* Check squareness and flatness of a fabricated beam
-* Calculate stiffness, and do experimental test
-
-Tools for calculating stiffness of beams
-
-* http://www.had2know.com/technology/I-beam-calculator-moments-engineering.html
-* http://www.engineersedge.com/section_properties_menu.shtml
-* http://www.amesweb.info/SectionalPropertiesTabs/SectionalPropertiesIbeam.aspx
-* https://en.m.wikipedia.org/wiki/Deflection_(engineering)
-* https://en.m.wikipedia.org/wiki/List_of_second_moments_of_area
 
 ## Laser diodes
 
