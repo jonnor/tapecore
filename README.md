@@ -308,6 +308,8 @@ Possible addons
 
 * [Lasercut vacuum table](http://hackaday.com/2016/03/19/diy-vacuum-table-makes-lasering-even-easier)
 * [Air assist for diode laser](http://www.thingiverse.com/thing:1688209), 3d-printed using a radial fan
+* [Air assist for compressor](http://www.thingiverse.com/thing:72691).
+Seems a small oil-free compressor (airbrush etc) is good enough. Recommened ratings are 30-50 PSI at 1-2.5 CFM.
 
 ## TapeZ
 
