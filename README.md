@@ -426,5 +426,6 @@ General machine building
 
 * [Methods for minimizing gear backlash](http://machinedesign.com/motion-control/methods-minimize-gear-backlash),
 spring-loaded distance, spring-loaded split gears, backloading/dual-gear-train
+* [3d=printed anti-backlash gear](http://www.thingiverse.com/thing:98393), dual layer with printed integrated springs.
 
 
