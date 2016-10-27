@@ -353,17 +353,25 @@ Unlike a cartesian or delta robot, several cylindrial robots could work into the
 They could potentially collaborate on a single (large) part, either for speed or multi-filament.
 Or indepentently making different parts, or multiple instances of the same part.
 
+Example of multi-arm collaborations
+
+* Flexible + rigid printing
+* 3d-printing binder + laying out fiber threads
+* Rough 3d-printing + precision lasering/milling
+* Conductive + non-conductive 3d-printing
+
 Challenges:
 
-* Mimizing weight of rotating joint, keeping it close to center of axis. For maximum speed
-* Implementing the IK for cylindrical in firmware
-* Cylindrical sectioned build area
-* Decreasing precision at long-reach
+* Having enough resolution in rotating joint. Probably will need gearing, challenge then becomes low/zero backlash in gear
+* Mimizing angular momentum of rotating joint, for maximum speed / minimum force. Keeping weight down, and it close to center of axis
+* Cylindrical sectioned build area, does not fit typical objects well. Can partition the circle into 3/4/6/8 rectangular build areas
+* Decreasing precision at long-reach. Can also be seen as feature, better precision on small objects
 
 TODO:
 
 * Sketch a rough concept
 * Test an arm beam, with tensioned wires on top+bottom for ridigity
+* Implementing the IK for cylindrical in firmware
 
 ## Experiments
 
@@ -413,5 +421,10 @@ Work by others
 
 * [3d-printed bushing](http://www.thingiverse.com/thing:1196801), replaces speciality linear bearings
 * [3d-printed beam surface](http://www.thingiverse.com/thing:9080/#comments)
+
+General machine building
+
+* [Methods for minimizing gear backlash](http://machinedesign.com/motion-control/methods-minimize-gear-backlash),
+spring-loaded distance, spring-loaded split gears, backloading/dual-gear-train
 
 
