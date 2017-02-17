@@ -213,6 +213,7 @@ Existing designs by others
 Concept based on TapeXY mechanics, adding a wire-driven cantilevered Z-axis.
 
 ![Wall-mounted 3d-printer](./doc/wallframed-3dp-concept.png)
+[FreeCAD project](./wallframed2.fcstd)
 
 Designed for mounting on a wall, to keep precious desktop space untouched.
 Inspired by machines such as the SmartRap Core.
