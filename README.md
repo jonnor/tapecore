@@ -208,6 +208,15 @@ Existing designs by others
 * Servo with steel bars and POM bushing parts. CNCed https://www.tindie.com/products/ijinstruments/servo-actuated-pen-slide/
 * XY pan+tilt mover, with Z motion. http://www.thingiverse.com/thing:31463
 
+## Wallmounted 3d-printer
+
+Concept based on TapeXY mechanics, adding a wire-driven cantilevered Z-axis.
+
+![Wall-mounted 3d-printer](./doc/wallframed-3dp-concept.png)
+
+Designed for mounting on a wall, to keep precious desktop space untouched.
+Inspired by machines such as the SmartRap Core.
+
 ## Reproducability
 
 ### Power needed to reproduce itself.
