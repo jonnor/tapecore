@@ -26,6 +26,20 @@ The problem however is that the switch cannot be lower than the nozzle when runn
 * Another advantage is that one can use a printed piece with correct offset
 to autolevel also ontop of objects (like a CNC mill)
 
+# Coating 
+
+Using coats of an epoxy-like binder as an alternative to tape.
+Can both provide structural stength, binding individual parts and getting a slick/hard sliding surface
+
+* [How to measure friction](http://www.tribology-abc.com/abc/friction.htm)
+* [Understanding Polyurethane Friction](https://www.slideshare.net/SunrayInc/understanding-polyurethane-coefficient-of-friction).
+Harder -> lower friction.
+Wet Polyurethane COF `<0.3` against stainless steel, and `<0.7` when dry.
+Wood against dry Polyurethane `<0.2` for 75D hardness.
+* [Testing coating hardness using pencil method](http://www.woodweb.com/knowledge_base/Testing_Your_Coatings_Hardness.html)
+* Durometer. [1](https://www.amazon.com/MegaBrand-Durometer-Digital-Hardness-Tester/dp/B011JCG1KK)
+
+
 # Reprappable laser
 
 Using Rishalaser/TapeXY as a base.
