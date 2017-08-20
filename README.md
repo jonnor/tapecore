@@ -232,6 +232,12 @@ It seems to be a blue diode laser with no air assist. This probably sets 5W as t
 If one could cut 4 mm acrylic instead, or 5-6 mm plywood, that would make it simpler to make a more rigid machine.
 This _might_ be doable with 8-10 watts IR diode. If more is needed, may need to assemble 15-20 watt using multiple diodes.
 
+[8W diode laser cutting 4mm plywood single pass](https://www.youtube.com/watch?v=gWxxxrpdF10)
+[5.5W laser cutting 4mm plywood single pass](https://www.youtube.com/watch?v=fT6_FLB4vyM)
+[3.5W laser cutting 3mm acrylic single pass](https://www.youtube.com/watch?v=rqom-Ns8LqA)
+[3.5W laser cutting 3mm plywood 5 passes 12mm/s](https://www.youtube.com/watch?v=iQ14XSbGCJk)
+[5.5W laser cutting 3mm plywood 2 passes](https://www.youtube.com/watch?v=j0H8-iMtKs4)
+
 ### Construction tricks
 
 To make more reproducible
@@ -252,7 +258,12 @@ Keep compatible with alu profiles? T-slot/Makerbeam/Openbeam
 
 ## Laser diodes
 
-* [Banggood](http://www.banggood.com/Wholesale-Laser-Equipment-c-3491.html), 1.6W - [5.5W](http://www.banggood.com/445nm-5_5W-5500mW-Blue-Laser-Module-With-Heatsink-For-DIY-Laser-Cutter-Engraver-p-999283.html)
+* Bangood [1.6W](http://www.banggood.com/Wholesale-Laser-Equipment-c-3491.html),
+[3.5W](https://www.banggood.com/450nm-3500mW-3_5W-Blue-Laser-Module-With-TTL-Modulation-for-DIY-Laser-Cutter-Engraver-p-1103261.html),
+[5.5W](http://www.banggood.com/445nm-5_5W-5500mW-Blue-Laser-Module-With-Heatsink-For-DIY-Laser-Cutter-Engraver-p-999283.html)
+[7W](https://www.banggood.com/EleksMaker-LA03-7000-445nm-7000mW-Blue-Laser-Module-With-Heatsink-For-DIY-Laser-Engraver-Machine-p-1127310.html),
+[15W](https://www.banggood.com/445-450nm-15W-Blue-Laser-Module-Mark-On-Metal-for-DIY-Laser-Engraver-Machine-p-1137779.html)
+
 * Osram PL TB450B [DigiKey](http://www.digikey.com/product-detail/en/osram-opto-semiconductors-inc/PL%20TB450B/PL%20TB450B-ND/5719266)
 * [DTR's Laser Shop](https://sites.google.com/site/dtrlpf/home/diodes)
 * [Laserdirect@Ebay](http://www.ebay.com/sch/laserdirect/m.html?_nkw&_armrs=1&_ipg&_from&rt=nc&_mPrRngCbx=1)
