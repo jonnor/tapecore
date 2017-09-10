@@ -1,3 +1,82 @@
+# TapeCore
+
+Construction techniques for digital fabrication machines and linear axes that aim
+to be extremely easy-to-replicate. Key ingredient is using tape surface for plain-bearings
+on parts made with commonly available 3d-printers and/or laser-cutters.
+
+# Doverail Slim
+
+[VIDEO: First tests](https://www.youtube.com/watch?v=5IGngfO671M)
+
+![Doverail 1 model](./dov/doverail-slim-model.png)
+
+
+Dovetail shape
+Fully-supported
+Multiple pieces can easily be joined together to build longer axes.
+
+This narrow rail is inspired by Hiwin-style linear actuators.
+
+* Design a machine that uses the rail system.
+For the Hiwin-style rail, a Delta (3d-printer) is the ideal.
+A horizontal CoreXY (laser/plotter/printer) with dual rails on gantry would also work, but have to align them carefully.
+A wider rail with side-loading capability would be suited for more kinematic systems.
+
+## Limitations
+
+## Learnings
+
+Poor adhesion of tape to printed PLA is a challenge.
+Office-tape, Kapton and PET all stick pretty bad to the rough surfaces.
+Especially for internal curvature. Applying tape to the rail is tricky due to its length, and while mounted together.
+Having a precisely cut tape piece ahead of time would help, as would a mounting jig which still allows easy access to underside.
+
+Edges to be taped should be: flat, tolerate slight misaligment and excess, ideally allow wrapping tape to adhere to itself.
+
+## TODO
+
+Contributions welcome!
+
+* Test the design on a Delta 3d-printer, or on a CoreXY pen-plotter
+* Make the FreeCAD properly parametric, with variables for length/height/width and tolerance 
+* Change to 4x mounting holes on the slider, ideally compatible with MGN9
+* Make an adjustable slider design that works
+
+# Doverail Wide
+
+A redesign of the Doverail Slim to have a much wider rail (40-100 mm),
+and using a slider which is fixed on one side and screw-ajustable tensioner on other side. 
+
+![Model of wide Doverail](./doc/doverail-wide-model.png)
+
+This should significantly improve side-loading ability, and make suitable for more kinematic systems.
+Examples would be an XYZ gantry-based system (as on many CNC-mills), and Y-slider (like Prusa i3) using a single rail.
+Even for a CoreXY laser or 3d-printer, the ability to have the X/Y rails vertical (like SmartRap Core)
+simplifies how axes and end-effectors are attached.
+
+Disadvantage is the higher material use and printing time.
+
+TODO
+
+* Finish first model, print and test an axis
+* Test with UHWM PE tape.
+* Test with Kapton tape
+
+Ideas
+
+* Test polyurethane coating on PLA. Does it reduce friction? Should improve wear resistance a lot
+* Coat rail with melted candle wax, similar to how skis are prepared? And/or maybe use actual HF ski wax, it is relatively available
+* Create sanding jigs, by adhering glue to inner/outer shape, then slide one across the other.
+
+## Tribology of common materials
+
+Needed is some proper test procedure and data for coefficient-of-friction tests for commonly available materials and their combinations.
+
+Examples:
+
+* Candle wax. Polyurethane coating, epoxy coating.
+* Lubricants: vegetable oil, sewing-machine-oil, mineral oil.
+* Surface treatment: Sanding, heating, buffing
 
 # TapeXY
 
