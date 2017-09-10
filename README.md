@@ -11,7 +11,9 @@ and the narrow rail format inspired by Hiwin MDG type linear actuators.
 
 [VIDEO: First tests](https://www.youtube.com/watch?v=5IGngfO671M)
 
-![Doverail 1 model](./dov/doverail-slim-model.png)
+![Doverail Slim testing](./doc/doverail-slim-test.jpg)
+
+![Doverail Slim model](./doc/doverail-slim-model.png)
 
 Flexing fingers on the slider gives some extra tolerance for variation along rail.
 M3 screwholes for attaching to the support of the rail.
