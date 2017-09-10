@@ -6,26 +6,31 @@ on parts made with commonly available 3d-printers and/or laser-cutters.
 
 # Doverail Slim
 
+First 3d-printed linear axis. Geometry inspired by dovetail slides found in lathes and mills,
+and the narrow rail format inspired by Hiwin MDG type linear actuators.
+
 [VIDEO: First tests](https://www.youtube.com/watch?v=5IGngfO671M)
 
 ![Doverail 1 model](./dov/doverail-slim-model.png)
 
-
-Dovetail shape
-Fully-supported
+Flexing fingers on the slider gives some extra tolerance for variation along rail.
+M3 screwholes for attaching to the support of the rail.
 Multiple pieces can easily be joined together to build longer axes.
-
-This narrow rail is inspired by Hiwin-style linear actuators.
-
-* Design a machine that uses the rail system.
-For the Hiwin-style rail, a Delta (3d-printer) is the ideal.
-A horizontal CoreXY (laser/plotter/printer) with dual rails on gantry would also work, but have to align them carefully.
-A wider rail with side-loading capability would be suited for more kinematic systems.
 
 ## Limitations
 
+Side-loading capacity is limited due to springyness of slider fingers.
+Rotational force will easily twist the slider.
+The short slider length and narrow rail contributes, but also primarily due to flex of slider fingers.
+
+So for a sliding Y bed (Prusa i3) would need dual rails.
+
+Not suitable for cantilevered designs (Y axis on a PrintrBot Simple or Z-axis on Ultimaker).
+It may be possible to compensate a little bit by using multiple widely-spaced sliders, as one would with a LMU6/8/10 based design.
+
 ## Learnings
 
+### Tape adheres poorly to printed PLA
 Poor adhesion of tape to printed PLA is a challenge.
 Office-tape, Kapton and PET all stick pretty bad to the rough surfaces.
 Especially for internal curvature. Applying tape to the rail is tricky due to its length, and while mounted together.
@@ -33,14 +38,32 @@ Having a precisely cut tape piece ahead of time would help, as would a mounting 
 
 Edges to be taped should be: flat, tolerate slight misaligment and excess, ideally allow wrapping tape to adhere to itself.
 
+### Vegetable oil gives higher static friction
+
+When adding a couple of drops of olive oil to the PLA rail with PETP taped slider, the slider became much more 'sticky'.
+Possible that sliding friction went down, but for plain bearing usually static friction is the biggest problem.
+Wiping it off with a wet cloth fixed the problem.
+Not known if a less viscous oil and/or hydrophobic/mineral oil would not have this problem.
+
+### Sliding non-coated printed parts works
+
+Since taping the rail is a bit tedious, we're primarily testing without any surface treatment on rail.
+Against a PETP taped slider, friction is OK and there is no noticable wear after hundreds of repetitions.
+Long-term wear is still unknown.
+
+Not tested, but it looks like PLA against PLA may actually perform OK for very simple tasks with low load, low precision requirements.
+
+This should be even better with a filament like PolyPropylene or Nylon,
+which have a lower coefficient of friction and has self-lubricating properties.
+
 ## TODO
 
-Contributions welcome!
-
-* Test the design on a Delta 3d-printer, or on a CoreXY pen-plotter
+* Test the design on a Delta 3d-printer, or a CoreXY pen-plotter
 * Make the FreeCAD properly parametric, with variables for length/height/width and tolerance 
 * Change to 4x mounting holes on the slider, ideally compatible with MGN9
 * Make an adjustable slider design that works
+
+Contributions welcome!
 
 # Doverail Wide
 
@@ -50,21 +73,23 @@ and using a slider which is fixed on one side and screw-ajustable tensioner on o
 ![Model of wide Doverail](./doc/doverail-wide-model.png)
 
 This should significantly improve side-loading ability, and make suitable for more kinematic systems.
-Examples would be an XYZ gantry-based system (as on many CNC-mills), and Y-slider (like Prusa i3) using a single rail.
+Examples would be an XYZ gantry-based system (as on many CNC-mills), and sliding-bed Y (like Prusa i3) using a single rail.
 Even for a CoreXY laser or 3d-printer, the ability to have the X/Y rails vertical (like SmartRap Core)
 simplifies how axes and end-effectors are attached.
 
 Disadvantage is the higher material use and printing time.
 
-TODO
+## TODO
 
 * Finish first model, print and test an axis
+* Test with Kapton tape on slider, nothing on rail.
 * Test with UHWM PE tape.
-* Test with Kapton tape
+* Test on a vertical-rail X gantry, with end-effector
+* Test on a sliding-Y bed
 
-Ideas
+## Ideas
 
-* Test polyurethane coating on PLA. Does it reduce friction? Should improve wear resistance a lot
+* Test polyurethane coating on PLA. Does it reduce friction? Is it easy to apply? Should improve wear resistance a lot
 * Coat rail with melted candle wax, similar to how skis are prepared? And/or maybe use actual HF ski wax, it is relatively available
 * Create sanding jigs, by adhering glue to inner/outer shape, then slide one across the other.
 
