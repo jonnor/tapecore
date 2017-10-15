@@ -94,6 +94,7 @@ Disadvantage is the higher material use and printing time.
 * Test polyurethane coating on PLA. Does it reduce friction? Is it easy to apply? Should improve wear resistance a lot
 * Coat rail with melted candle wax, similar to how skis are prepared? And/or maybe use actual HF ski wax, it is relatively available
 * Create sanding jigs, by adhering glue to inner/outer shape, then slide one across the other.
+* Use a steel rod as the idler instead of (608) bearing. For instance the head of a hex bolt?
 
 ## Tribology of common materials
 
