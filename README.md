@@ -106,6 +106,46 @@ Examples:
 * Lubricants: vegetable oil, sewing-machine-oil, mineral oil.
 * Surface treatment: Sanding, heating, buffing
 
+# PlateXY
+Extremely simple plotter/laserengraver.
+
+Goals/features
+
+* Custom rails fixed to standard plate
+* Usable horizontally, or vertically
+* Head is wire-suspended between fixed rails (no gantry), glideblocks tensioned by the drive wires
+* Standard workarea of with 60cm wide table/plate A3++/35x45 cm 
+* Workarea over 1x2 meter by using 1.20x2.40m fullsheet, or attaching to wall
+
+
+## TODO
+
+* Assemble and test PlateXY mechanics
+* Design and test head/mover, with sliders on feet
+* Complete pen-plotter axis, using on cnchead design
+* Add endstops
+* Wire-tensioning mechanism?
+* Test plotting accuracy/speed
+* Test running plotter vertically
+* Test with laserhead, engraving+cutting
+* Document BOM, suppliers
+* Release lasercutting-ready files
+* Document assembly steps
+
+## Ideas
+
+* Make 'collapsable' for easy transportation.
+Wires still in place, just stretched out to assemble.
+Attaching to plate using non-invasive clamps etc.
+Should have guide wires for easily getting rails parallell (and maybe square).
+* Attaching onto wall with freestanding rails.
+Each rail a sandwhich/I-beam, manufacturable as multiple pieces.
+Allows plate to be optional, using wall as worksurface directly.
+* Flip motor to top-side, to not build downwards.
+Requires some spacers. Could use this to make a motorplate, with tension-adjustment?
+Can to let motorplate slide parallell on rail, screws for locking position/downwards.
+
+
 # TapeXY
 
 Experiment in super low-cost XY stage, for uses in digital fabrication techniques
@@ -144,7 +184,7 @@ Main vitamins
 * 1x Motion driver board. RAMPS or similar
 * Cables for motors and endstops
 * Low-friction tape, width at least 20mm. Recommened:
-[UHMWPE 1in 3mil](https://www.amazon.com/JVCC-UHMW-PE-3-UHMW-Polyethylene-Film/dp/B00WUU61AQ) |
+[UHMWPE 1in 3mil](https://www.amazon.com/JVCC-UHMW-PE-3-UHMW-Polyethylene-Film/dp/B00WUU61A) |
 Alternative: Kapton tape, as used for Reprap 3d-printers.
 * Strong line. Recommended: Braided fishing line (Spectra or similar).
 Alternative: Nylon, Polyester or linen.
@@ -275,6 +315,25 @@ Tools for calculating stiffness of beams
 * http://www.amesweb.info/SectionalPropertiesTabs/SectionalPropertiesIbeam.aspx
 * https://en.m.wikipedia.org/wiki/Deflection_(engineering)
 * https://en.m.wikipedia.org/wiki/List_of_second_moments_of_area
+
+## CNC Z-axis
+
+[Servo-driven Z-axis with ER11 shank driven by brushless motor](./cnchead.fcstd)
+
+TODO
+
+* Add rack&pinion
+* Finish servo attachment
+* Add holes for tightening screws for pen holding
+* Test with pen
+* Add pulleys
+* Test with CNC spindle
+
+Servo options. Should at least have 5 kg-cm
+
+* [JX Servo PS-4806HB](https://www.banggood.com/JX-Servo-PS-4806HB-6KG-High-Torque-Standard-48_5g-Servo-for-RC-Models-p-1013373.html), 6kg-cm
+* [TowerPro MG996R](https://www.banggood.com/TowerPro-MG996R-Metal-Gear-Digital-High-Torque-Servo-55g-p-982287.html), 10 kg-cm
+
 
 ## Pen Z-axis
 
