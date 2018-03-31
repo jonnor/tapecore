@@ -12,7 +12,7 @@ Open-bottom frame, meant to be positioned over workpiece/table.
 
 Small version, with A4 workarea (22 x 30 cm). 
 
-![TapeCore Handy A4](./handy-a4-concept.png)
+![TapeCore Handy A4](./doc/handy-a4-concept.png)
 
 [FreeCAD project](./handy-a4.fcstd)
 
@@ -47,14 +47,16 @@ v1.1 = laserengraver
 * Add laser reducing light on sides+top, using window tinting film.
 * Fix parametrics to respect material size+clearance
 
-v1.3 = reprap
+v1.3 = reprap?
 
 * Test maximum cut depth in wood/plastic and 2.5w
 * Test splitting gantry into 2/3 pieces
 
 ## Handy A2
 
-* Based on Handy A4 design, scaled up to A2 workarea (60x42cm)
+Medium-sized machine, A2 workarea (60x42cm)
+
+* Scaled up version of Handy A4 design
 * Aim for 60x120 footprint or smaller. Can still fit on a typical table
 * Splits gantry, sidewalls and rails into 2/3 pieces.
 * Extend the corner brackets to also connect to side stiffeners

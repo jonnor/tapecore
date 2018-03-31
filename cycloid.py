@@ -15,6 +15,7 @@ Draft.makeWire(P,closed=False,face=True,support=None)
 # Create shape for one tooth only
 # Repeat over by period/n_teeth
 # Close the shape
+# Fillet teeth tip
 
 def cycloid_x(y, a=1.0):
     return a * math.acos(1.0 - (y/a)) - math.sqrt(2.0*a*y - y**2)
@@ -35,7 +36,7 @@ def cycloid_period(a, steps):
     x = xleft + xright
 
     # reflect across Y
-    Y = list(ymax - y for y in Y)
+    #Y = list(ymax - y for y in Y)
 
     return { 'x': x, 'y': Y, 'xmax': xmax, 'ymax': ymax }
 
