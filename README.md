@@ -4,6 +4,74 @@ Construction techniques for digital fabrication machines and linear axes that ai
 to be extremely easy-to-replicate. Key ingredient is using tape surface for plain-bearings
 on parts made with commonly available 3d-printers and/or laser-cutters.
 
+# Handy
+
+Open-bottom frame, meant to be positioned over workpiece/table.
+
+## Handy A4
+
+Small version, with A4 workarea (22 x 30 cm). 
+
+![TapeCore Handy A4](./handy-a4-concept.png)
+
+[FreeCAD project](./handy-a4.fcstd)
+
+[Bill-of-materials](https://docs.google.com/spreadsheets/d/1o2K1h2c_w2d49ZTSx7vD1f-7HGYju6wTmgCQS48S1lg/edit?usp=sharing)
+
+### Status
+March 2018: **Actively developed**
+
+### TODO
+
+v0.3
+
+* Test plotting accuracy/speed
+* Buy servo motors
+* Finish penplotter head
+* Add wiring to head. Bowden tube or thin polypropylene
+
+v1.0 = penplotter workshop ready
+
+* Add endstops
+* Document BOM, suppliers
+* Release lasercutting-ready files
+* Document assembly steps
+* Produce 2 or 3 units, bring to LGM2018 
+
+v1.1 = laserengraver
+
+* Add holes for attaching to table/wall
+* Test running plotter vertically
+* Test with laserhead, primarily engraving
+* Add laser guard around diode (Rishalaser style)
+* Add laser reducing light on sides+top, using window tinting film.
+* Fix parametrics to respect material size+clearance
+
+v1.3 = reprap
+
+* Test maximum cut depth in wood/plastic and 2.5w
+* Test splitting gantry into 2/3 pieces
+
+## Handy A2
+
+* Based on Handy A4 design, scaled up to A2 workarea (60x42cm)
+* Aim for 60x120 footprint or smaller. Can still fit on a typical table
+* Splits gantry, sidewalls and rails into 2/3 pieces.
+* Extend the corner brackets to also connect to side stiffeners
+
+# Axi
+
+Cantilevered CoreXY, inspired by Axidraw V3.
+A4 workarea, for use with pen or laserhead.
+
+![TapeCore Axi concept drawing](./doc/axi-concept.png)
+
+[FreeCAD sources](./axi.fcstd)
+
+## Status
+Just a concept sketch, not actively developed.
+
+
 # Doverail Slim
 
 First 3d-printed linear axis. Geometry inspired by dovetail slides found in lathes and mills,
@@ -106,45 +174,6 @@ Examples:
 * Lubricants: vegetable oil, sewing-machine-oil, mineral oil.
 * Surface treatment: Sanding, heating, buffing
 
-# PlateXY
-Extremely simple plotter/laserengraver.
-
-Goals/features
-
-* Custom rails fixed to standard plate
-* Usable horizontally, or vertically
-* Head is wire-suspended between fixed rails (no gantry), glideblocks tensioned by the drive wires
-* Standard workarea of with 60cm wide table/plate A3++/35x45 cm 
-* Workarea over 1x2 meter by using 1.20x2.40m fullsheet, or attaching to wall
-
-
-## TODO
-
-* Assemble and test PlateXY mechanics
-* Design and test head/mover, with sliders on feet
-* Complete pen-plotter axis, using on cnchead design
-* Add endstops
-* Wire-tensioning mechanism?
-* Test plotting accuracy/speed
-* Test running plotter vertically
-* Test with laserhead, engraving+cutting
-* Document BOM, suppliers
-* Release lasercutting-ready files
-* Document assembly steps
-
-## Ideas
-
-* Make 'collapsable' for easy transportation.
-Wires still in place, just stretched out to assemble.
-Attaching to plate using non-invasive clamps etc.
-Should have guide wires for easily getting rails parallell (and maybe square).
-* Attaching onto wall with freestanding rails.
-Each rail a sandwhich/I-beam, manufacturable as multiple pieces.
-Allows plate to be optional, using wall as worksurface directly.
-* Flip motor to top-side, to not build downwards.
-Requires some spacers. Could use this to make a motorplate, with tension-adjustment?
-Can to let motorplate slide parallell on rail, screws for locking position/downwards.
-
 
 # TapeXY
 
@@ -164,6 +193,9 @@ inspired by [a design](http://www.thingiverse.com/thing:3554) by Peter Jansen
 Like on Tantillus and some Delta printers.
 * Reproduction with primarily lasercutter (or CNC mill), in wood/acrylics.
 * [CoreXY](http://corexy.com) kinematics
+
+### Status
+Not actively developed. Use [Handy](./README.md#Handy) instead
 
 ### Parts
 
@@ -208,55 +240,19 @@ Effector
 * [Laser diode driver](../currentsource). Linear constant-current source based on op-amp+MOSFET, for 5volt supply.
 * Fully operational prototype, driven by RAMPS w/Marlin
 
-### TODO
+### Limitations
 
-v2 implement improvements
+* Non-standard lasermodule and attachment
+* Gantry stiffness is too low
+* Small working area, approx 15x10cm
 
-* Ensure lasermodule does not interfere with wire/belt path
-* Make the pulley have holes for fixing the wire onto, and semi-hollow core for easy threading
-* Make the pulleys smaller
-* Add holes in backwall for motor cables
-* Add mounting holes for endstops
-* Design a belt/line attachment and tensioning system. Or just use strip-ties??
-* Reduce touchpoints/area for the gantry slides.
-* Add holes for attaching RAMPS/controlboard
-* Use a full mid-plate in the gantry for stiffness
-* Maybe move the walls inwards, closer to the slide surface area
+Missing
 
-Next, full-size laser test
-
-* Make fully parametric, driven by material size + work area
-* Use 2x as the standard workarea aspect ratio
-* Use a standard diode laser module (or something compatible). 33mm sink seems common.
-* Find a solution for managing the cables going to head/effector. 4mm ID bowden tube? PP or even paper folded into tube
-
-Reproducability
-
-* Test using multiple fiber-guided IR laser diodes with focusing mirror, to cut 4mm+ acrylic.
-* Test making axis in multiple parts, so one can make machines as big as area
-* Test replacing the 608 bearings with printed+tape bearings
-* Test cutting the low-friction tape with diode laser
-* Reduce number of screws used. Use lasercut pins instead?
-
-Maybe:
-
-* Design some self-adjusting system for friction parts
-* Make a vinylknife/pen attachment
-* Prototype a matching Z-bed/table design
-* Test FDM printing
-
-Research
-
-* Coefficient of friction.
-[Table](http://www.goodfellow.com/catalogue/GFCat2C.php?ewd_token=Q4ZIFOAVRhE2dSOYkbUxPMdSBZyxXk&n=Ab6sV0qHM8iAeitFJGlgDA1qjQCrhQ&ewd_urlNo=GFCat26&type=30&prop=3)
-Kapton/Polyimide: 0.45, Teflon/PTFE: 0.05-0.2, UHMW PE: 0.1-0.2. UHMW apparently has the best abrasion resistance, seems somewhat cheaper than PTFE.
-
-Existing low-cost laser diode engravers
-
-* [smartDIYs](http://www.thingiverse.com/thing:1026345) open source kit. Lasercut acrylic, steelrods+timingbelts, motor on gantry.
-* [Mr. Beam](https://www.mr-beam.org/) open source kit. Kickstarter 2014. 3d-printed + wood-frame. [Octoprint-based](https://github.com/mrbeam/OctoPrint) software
-* [Emblaser](https://darklylabs.com/emblaser-overview) [2](https://sites.google.com/site/3dprinterlist/lasercutters/darklylabs-a3-diode-laser)
-* [Fabool Laser Mini](http://www.smartdiys.cc/fabool-laser-mini/) claims to be openn source. Also has a CO2 laser available.
+* Holes in backwall for motor cables
+* Mounting holes for endstops
+* A belt/line attachment and tensioning system. Just use strip-ties??
+* Holes for attaching RAMPS/controlboard
+* Cables management for cables going to head/effector
 
 ## I-beam
 
@@ -485,11 +481,20 @@ Of mine
 * [Clothing](../clothing), various techniques rely on laser
 * [Rishalaser](../rishalaser), build of existing open-source low-powered laserengraver
 
-Of others
+Existing low-cost laser diode engravers
+
+* [smartDIYs](http://www.thingiverse.com/thing:1026345) open source kit. Lasercut acrylic, steelrods+timingbelts, motor on gantry.
+* [Mr. Beam](https://www.mr-beam.org/) open source kit. Kickstarter 2014. 3d-printed + wood-frame. [Octoprint-based](https://github.com/mrbeam/OctoPrint) software
+* [Emblaser](https://darklylabs.com/emblaser-overview) [2](https://sites.google.com/site/3dprinterlist/lasercutters/darklylabs-a3-diode-laser)
+* [Fabool Laser Mini](http://www.smartdiys.cc/fabool-laser-mini/) claims to be openn source. Also has a CO2 laser available.
+
+Other inspirational machines
 
 * [MPlus One](http://www.thingiverse.com/thing:1104249).
 Cantilevered, moving bed like PrinterBot Simple and Smartrap, with lasered/milled structure.
 Maybe has potential in combination with tape principle, possibly making even cheaper than a CoreXY?
+* Axidraw V3
+* Cloth of the Bot
 
 Possible addons
 
@@ -560,9 +565,28 @@ TODO:
 * Test an arm beam, with tensioned wires on top+bottom for ridigity
 * Implementing the IK for cylindrical in firmware
 
-## Experiments
+# Experiments
 
-### Kapton 608 bearing
+## PlateXY
+Experiment in extremely simple plotter/laserengraver.
+
+Features
+
+* Head is wire-suspended between fixed rails (no gantry),
+* Glideblocks tensioned by the drive wires
+* Custom rails fixed to standard plate
+
+### Status
+**Aborted**. In favor of [Handy](./README.md#Handy)
+
+The gantry-free design was found not good enough for penplotting use.
+The lack of locking between the two sliders meant they would move independently, causing a twist in the head.
+At A4 size it might have been barely acceptable, but not better than simpler kinematics like [Axi](./README.md#Axi).
+
+However this kinematics can be useful when precision is not needed, and it is desirable to hide the mechanics of the machine.
+For instance with the rails mounted to floor/ceiling, and using transparent fishing line, one can make pieces move around in XZ 'invisibly'.
+
+## Kapton 608 bearing
 
 .. Wednesday 14 Oct 2015, Oslo ..
 
