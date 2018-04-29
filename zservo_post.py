@@ -3,6 +3,8 @@ import os
 import re
 
 def parse_command(line):
+    line = re.compile(r"\(.*").sub('', line)
+
     pieces = line.split(' ')
     parsed = {}
     for p in pieces:
@@ -14,7 +16,7 @@ def parse_command(line):
         if not data:
             continue
 
-        if kind == 'G':
+        if kind in ('G', 'M'):
             parsed[kind] = int(data)
         else:
             parsed[kind] = float(data)
@@ -27,13 +29,19 @@ def serialize_command(command):
     for parameter in known_parameters:
         val = command.get(parameter)
         if val is not None:
-            pieces.append("{}{}".format(parameter, val))
+            if isinstance(val, float):
+                pieces.append("{}{:.3f}".format(parameter, val)) 
+            else:
+                pieces.append("{}{}".format(parameter, val))
 
     unknown_parameters = set(command.keys()) - set(known_parameters)
     for parameter in unknown_parameters:
         val = command.get(parameter)
         if val is not None:
-            pieces.append("{}{}".format(parameter, val))        
+            if isinstance(val, float):
+                pieces.append("{}{:.3f}".format(parameter, val)) 
+            else:
+                pieces.append("{}{}".format(parameter, val))       
 
     return ' '.join(pieces)
 
@@ -50,8 +58,9 @@ def postprocess(gcode):
         if Z is not None:
             change_z = last_z is None or abs(c['Z']-last_z) > epsilon
             if change_z:
-                servo = 'M3 S0' if Z > 0.0 else 'M3 S40'
+                servo = 'M3 S0' if Z > 0.0 else 'M3 S48'
                 out.append(servo)
+                out.append('G4 P0.1')
                 last_z = c['Z']
 
             del c['Z']
