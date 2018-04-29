@@ -19,33 +19,28 @@ Small version, with A4 workarea (22 x 30 cm).
 [Bill-of-materials](https://docs.google.com/spreadsheets/d/1o2K1h2c_w2d49ZTSx7vD1f-7HGYju6wTmgCQS48S1lg/edit?usp=sharing)
 
 ### Status
-March 2018: **Actively developed**
+April 2018: **Actively developed**
 
 ### TODO
 
-v0.3
+v1.0 = penplotter
 
 * Test plotting accuracy/speed
-* Buy servo motors
-* Finish penplotter head
-* Add wiring to head. Bowden tube or thin polypropylene
-
-v1.0 = penplotter workshop ready
-
 * Add endstops
-* Document BOM, suppliers
+* Improve Y axis backlash. Use rail on each side?
 * Release lasercutting-ready files
 * Document assembly steps
-* Produce 2 or 3 units, bring to LGM2018 
 
 v1.1 = laserengraver
 
 * Add holes for attaching to table/wall
+* Improve diagonal stiffness. Wedge connecting rail with side?
 * Test running plotter vertically
 * Test with laserhead, primarily engraving
 * Add laser guard around diode (Rishalaser style)
 * Add laser reducing light on sides+top, using window tinting film.
 * Fix parametrics to respect material size+clearance
+* Microswitch safety turns off laser if lifted from table
 
 v1.3 = reprap?
 
@@ -59,7 +54,6 @@ Medium-sized machine, A2 workarea (60x42cm)
 * Scaled up version of Handy A4 design
 * Aim for 60x120 footprint or smaller. Can still fit on a typical table
 * Splits gantry, sidewalls and rails into 2/3 pieces.
-* Extend the corner brackets to also connect to side stiffeners
 
 # Axi
 

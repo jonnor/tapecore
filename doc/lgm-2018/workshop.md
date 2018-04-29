@@ -9,13 +9,13 @@ Motivation, construction principles, current state
 - Understand basics of digital fabrication.
 
 ## Non-goals
-
+- Learn to build machine
 
 ## Format
 
 1. Demo
-2. Talk with some background
-3. 
+2. Talk, some background
+3. Hands-on usage
 
 ## About me
 
@@ -37,13 +37,13 @@ Background
 Dayjob
 
     Independent consultant. Internet of Things. Rapid prototyping. SW/E.eng/M.Eng 
-    MSc Data Science. Machine learning
+    MSc. Data Science. Machine learning
 
 ## TapeCore
 
 - LOW cost
 - LOW tech
-- OK performance
+- OK performance. Sub-millimeter precision
 
 Fabricatable in makerspace/fablab 
 
@@ -53,9 +53,34 @@ Lasercut + 3d-printed.
 Instead: Digital fabricated and generic consumables.
 Tape (Kapton/UHWMPE), Wire/fishing line.
 
-BAD: glue, screws
+### Handy A4
+
+Designed in FreeCAD
+
+[Bill of Materials](
+https://docs.google.com/spreadsheets/d/1o2K1h2c_w2d49ZTSx7vD1f-7HGYju6wTmgCQS48S1lg)
 
 Why penplotters
+
+GRBL controller
+https://github.com/gnea/grbl
+
+
+
+## Review
+
+Good
+
+- Portable
+- Open bottom frame
+
+Needs work
+
+- Backlash in Y axis. Replace split rail with individual rails 
+- Glue needed for gantry slider.
+- Diagonal stiffness too low
+- Too many screws
+
 
 ## Fabricatable machines
 
@@ -68,20 +93,29 @@ https://github.com/fellesverkstedet/fabricatable-machines
 - FAB2.0 - build a Fablab in a Fablab
 
 
-
 ## Digital fabrication
 
 ### Concept
 
-- Digital 3d-model
-- Digitall controlled machine
+    Digital 3d-model + digitally controlled fabrication machine
+    => automated production of
+       software-defined physical objects
 
-In practice: Lots of manual labor, craft involved
+In practice:
+
+- Manual labor needed.
+Postprocessing, machine tending
+- Craft involved.
+Design-for-manufacturing, technology choice, choosing machine parameters
 
 ### Where is this taking us?
 
-- Less human labor, manual skills needed
+- Less human labor needed
+Cheaper products. Fewer jobs
+- Less manual skills needed
+Beginners can get good results also.
 - Mass-production
+Automated, easy to scale up
 - Mass-customization
 Each part can be unique 
 
@@ -89,7 +123,8 @@ Each part can be unique
 
 Ensure the benefits are widely distributed instead of going to a selected few.
 
-* Shared public access. Maker/hackerspaces + Fablabs
+* Shared public access.
+Maker/hackerspaces, Fablabs
 * Open online manufacturing services.
 Ponoko,3d-hubs,Shapeways,iMaterialize
 * Open source hardware.
@@ -97,7 +132,7 @@ Reprap project, Prusa i3
 * Open source software.
  Grbl, Marlin
 * Consumer market.
-Low prices, OK volume,
+Low prices, OK volume.
 Makers as early adopters
 
 ### Process
@@ -117,7 +152,11 @@ Example Plotting:
 
 Example LaserCutting:
 
+    FreeCAD -> AutoLaser -> Control panel on Redsail
 
+Example generative code
+
+    Python script generates
 
 Why these divisions?
 
@@ -125,7 +164,22 @@ Why these divisions?
 - CAD: Best software depends on what to design.
 - CAM/MC: Depends on technology
 
+### Languages
 
+
+https://www.shapeoko.com/wiki/index.php/G-Code
+http://reprap.org/wiki/G-code
+
+Alternative for penplotters: HPGL
+
+```
+PU100,100
+PD200,200
+```
+Often in 1/64th inch etc
+
+
+## Machine
 
 Open loop. Dead reckoning
 
