@@ -66,6 +66,33 @@ v3.0 = reprap?
 * Test maximum cut depth in wood/plastic and 2.5w
 * Test splitting gantry into 2/3 pieces
 
+## Learnings
+
+
+### Silicone good lubricant with Kapton
+Pure silicone spray, like also used as mold release, is the best.
+Works well with Kapton, gives good glide and seems to stay around for a while.
+Mechanical lubricant spray based on silicone also works (tested manufacturer: WD40).
+However is a bit too fluid, smells badly, and seems to dissolve glue of the Kapton tape.
+
+### Mixing directions important with 3d-printed sliders
+
+If parts are printed with sliding geometry in same direction they have same periodic pattern.
+This becomes slightly 'interlocking' when sliding against eachother.
+If one part is printed 90 degrees this locking effect does not happen.
+Ex: If A is printed with sliding in X direction, print B with sliding in Z direction.
+
+
+```
+BAD
+A:  | | |
+B:   | | |
+
+Good:
+A: | | |
+B: _ _ _
+```
+
 ## Handy A2
 
 Medium-sized machine, A2 workarea (60x42cm)
@@ -174,9 +201,7 @@ Disadvantage is the higher material use and printing time.
 
 ## Ideas
 
-* Test polyurethane coating on PLA. Does it reduce friction? Is it easy to apply? Should improve wear resistance a lot
-* Coat rail with melted candle wax, similar to how skis are prepared? And/or maybe use actual HF ski wax, it is relatively available
-* Create sanding jigs, by adhering glue to inner/outer shape, then slide one across the other.
+* Create sanding jigs, by adhering sandpaper to inner/outer shape, then slide one across the other.
 * Use a steel rod as the idler instead of (608) bearing. For instance the head of a hex bolt?
 
 ## Tribology of common materials
@@ -186,7 +211,7 @@ Needed is some proper test procedure and data for coefficient-of-friction tests 
 Examples:
 
 * Candle wax. Polyurethane coating, epoxy coating.
-* Lubricants: vegetable oil, sewing-machine-oil, mineral oil.
+* Lubricants: vegetable oil, sewing-machine-oil, mineral oil, silicone oil.
 * Surface treatment: Sanding, heating, buffing
 
 
