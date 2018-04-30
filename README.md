@@ -19,30 +19,49 @@ Small version, with A4 workarea (22 x 30 cm).
 [Bill-of-materials](https://docs.google.com/spreadsheets/d/1o2K1h2c_w2d49ZTSx7vD1f-7HGYju6wTmgCQS48S1lg/edit?usp=sharing)
 
 ### Status
-April 2018: **Actively developed**
+May 2018: **Needs revision**
+
+Version 1 with split rails has a lot of backlash in the Y axis,
+primarily due to the gantry twisting. This is planned fixed in a future version.
+
+### Handy A4 penplotter
+
+Firmware: [GRBL with servo](https://github.com/jonnor/grbl/tree/handy-a4-plotter).
+
+CAM/MachineControl: Recommend [LaserWeb4](https://github.com/LaserWeb/LaserWeb4). Set gcode options, Tool On: `M3 S40` and Tool Off to `M3 S0`. 
+Can also use Inkscape gcodetools + [custom postprocessor](./zservo_post.py) + Universal Gcode Sender
 
 ### TODO
 
 v1.0 = penplotter
 
-* Test plotting accuracy/speed
+* Fix Y axis backlash. Use rail on each side?
+* Improve diagonal stiffness. Wedge connecting rail with side?
 * Add endstops
-* Improve Y axis backlash. Use rail on each side?
-* Release lasercutting-ready files
+* Improve wire guides for motors
+* Fix parametrics to respect material size+clearance
+* Make pen pressure more even. Use a spring/rubberband in downward direction
+* Publish files with part layout ready for lasercutting and 3d-printing
 * Document assembly steps
 
-v1.1 = laserengraver
+v1.1
 
+* Gantry: Avoid needing glue to assemble
+* Gantry: Move adjustment of slider pressure to bottom. Wider sliders on top 
+* Gantry: Move all wire attachment to front. Requires idlers/wires to be placed vertically
+* Add wire guides to all idlers. Can be disassembled without loosing wires
+* Add carrying holes to sides
 * Add holes for attaching to table/wall
-* Improve diagonal stiffness. Wedge connecting rail with side?
+
+v2.0 = laserengraver
+
 * Test running plotter vertically
 * Test with laserhead, primarily engraving
 * Add laser guard around diode (Rishalaser style)
 * Add laser reducing light on sides+top, using window tinting film.
-* Fix parametrics to respect material size+clearance
 * Microswitch safety turns off laser if lifted from table
 
-v1.3 = reprap?
+v3.0 = reprap?
 
 * Test maximum cut depth in wood/plastic and 2.5w
 * Test splitting gantry into 2/3 pieces
