@@ -93,6 +93,13 @@ A: | | |
 B: _ _ _
 ```
 
+### Ideas
+
+* 3d-print the 'dragchain' that guides wires etc out to toolhead.
+Set of interlinking tubular pieces, possibly print-in-place.
+Possibly held together by fishing line.
+
+
 ## Handy A2
 
 Medium-sized machine, A2 workarea (60x42cm)
